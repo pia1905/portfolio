@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)http://127.0.0.1:5500/index1.html#contact -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pragati's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./Pragati&#39;s Portfolio_files/css2" rel="stylesheet">
+    <link rel="stylesheet" media="screen and (max-width:800px)" href="./Pragati&#39;s Portfolio_files/table.css">
+    <link rel="stylesheet" media="screen and (max-width:530px)" href="./Pragati&#39;s Portfolio_files/phone.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            margin: 20px 0px;
+        }
+
+        .navbar ul li {
+            font-family: century;
+            font-size: 1.1rem;
+            font-weight: bold;
+
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 8px 25px;
+            transition: all .5s ease;
+        }
+
+        .navbar ul li a:hover {
+            background-color: white;
+            color: black;
+            box-shadow: 0 0 10px white;
+        }
+
+        #home {
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(0, 0, 0, 0.5);
+            height: 840px;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        #home::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: url('https://i.pinimg.com/564x/e6/13/60/e6136017038ac22c4b30a2998c37b334.jpg') no-repeat center center/cover;
+            height: 900px;
+            width: 100%;
+            z-index: -1;
+            opacity: .8;
+            opacity: .8;
+
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            top: 30%;
+            right: 10%;
+        }
+
+        .headings {
+            font-family: century;
+            font-size: 3rem;
+            text-align: center;
+            margin: 40px 0px;
+        }
+
+        .btn {
+            padding: 10px 35px;
+            background-color: transparent;
+            border: 1px solid white;
+            color: white;
+            outline: none;
+            transition: .6s ease;
+        }
+
+        .btn:hover {
+            cursor: pointer;
+            background-color: white;
+            color: black;
+            box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white;
+            font-weight: bold;
+        }
+
+        #about {
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            padding: 20px;
+            margin-bottom: 50px;
+
+        }
+
+        #pic {
+            display: flex;
+        }
+
+        #pic img {
+            width: 575px;
+            height: 400px;
+            border: 2px solid blueviolet;
+        }
+
+        #intro {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding: 10px;
+        }
+
+        #intro h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+
+        }
+
+        #portfolio {
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: white;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            box-sizing: border-box;
+        }
+
+        .gallery img {
+            width: 360px;
+            height: 240px;
+            margin: 10px;
+        }
+
+        #services {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .row{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+        }
+        .box{
+            display: flex;
+            flex-direction: column;
+            width: 350px;
+            height: 450px;
+            border: 1px solid black;
+            margin: 10px;
+            align-items: center;
+            text-align: justify;
+            padding: 10px;
+            border-radius: 15px;
+            background: linear-gradient(to top, rgb(255,45,45) 50%, white 50%);
+            background-size: 100% 200%;
+            transition: all .8s;
+
+        }
+        .box:hover{
+            background-position: left bottom;
+            color: white;
+            border: none;
+            box-shadow: 0 0 20px rgb(255,45,45);
+        }
+
+        .box img{
+            width: 80px;
+            height: 80px;
+            background-color: white;
+            padding: 10px;
+
+        }
+
+        #contact{
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 20px;
+        }
+        .form{
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            align-items: center;
+            margin: 20px 0px;
+        }
+        .input{
+            padding: 12px;
+            margin: 15px;
+            width: 30%;
+            border: none;
+            outline: none;
+        }
+
+        #msg{
+            width: 20%;
+            padding: 10px;
+            margin: 15px;
+            border: none;
+            outline: none;
+        }
+
+        #send{
+            width: 10%;
+            padding: 10px;
+            margin: 40px;
+            border: none;
+            outline: none;
+        }
+
+        #send:hover{
+            cursor: pointer;
+            box-shadow: 0 0 10px white;
+        }
+
+    </style>
+
+    
+
+    </head><body>
+        <nav class="navbar">
+            <ul>
+                <li><a href="http://127.0.0.1:5500/index1.html#home">HOME</a></li>
+                <li><a href="http://127.0.0.1:5500/index1.html#services">SERVICES</a></li>
+                <li><a href="http://127.0.0.1:5500/index1.html#about">ABOUT</a></li>
+                <li><a href="http://127.0.0.1:5500/index1.html#portfolio">PORTFOLIO</a></li>
+                <li><a href="http://127.0.0.1:5500/index1.html#contact">CONTACT ME</a></li>
+            </ul>
+        </nav>
+        <section id="home">
+            <div class="main">
+                <h1 class="headings">I AM <br> PRAGATI</h1>
+                <button class="btn">
+                    HIRE ME
+                </button>
+            </div>
+        </section>
+        <section id="about">
+            <h1 class="headings">ABOUT</h1>
+            <div id="pic">
+                <img src="./Pragati&#39;s Portfolio_files/68de16c5f54dd9b4ff354af4acf39a42.jpg" alt="">
+                <div id="intro">
+                    <h2>PRAGATI</h2>
+                    <p>Hello everyone, I am Pragati a Freshman from IGDTUW. I am pursuing my BTech in CSE-AI. I have
+                        done my class 12th from Shanti Gyan Niketan Senior Secondary school. I have knowledge about
+                        Python and currently working on my web development skills and learning DSA in Java as well.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil eius, in optio earum ut ex eum
+                        quaerat ea laudantium assumenda quam illo amet corrupti eos ab, nemo saepe sint adipisci! Lorem
+                        ipsum dolor sit amet, consectetur adipisicing elit. Soluta labore sint facilis commodi debitis
+                        laboriosam sunt vel laborum, aliquid quas vero fugit, voluptate harum non? Voluptas alias
+                        consequatur magni consectetur nesciunt nobis animi sint. </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <h1 class="headings">PORTFOLIO</h1>
+            <div class="gallery">
+                <img src="./Pragati&#39;s Portfolio_files/3b585d6d365e5d629f0b0513364e8afd.jpg" alt="">
+                <img src="./Pragati&#39;s Portfolio_files/4caaa2c448df88090e77d0b6eb43388b.jpg" alt="">
+                <img src="./Pragati&#39;s Portfolio_files/45306cf69b915907905195c868d43a83.jpg" alt="">
+                <img src="./Pragati&#39;s Portfolio_files/f95fa571bcf6b33e55a6f4225b3d22af.jpg" alt="">
+                <img src="./Pragati&#39;s Portfolio_files/2b8cdb0c33ccd8082c1d9accb0a601ee.jpg" alt="">
+                <img src="./Pragati&#39;s Portfolio_files/e267be3228b724ec30b3c247e7a690cb.jpg" alt="">
+            </div>
+        </section>
+
+        <section id="services">
+            <h1 class="headings">SERVICES</h1>
+            <div class="row">
+                <div class="box">
+                    <img src="./Pragati&#39;s Portfolio_files/ee3369f79097a1e4c1c95742b2483a15.jpg" alt="">
+                    <h1 class="headings">Website Design</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ea magni hic fugiat debitis placeat
+                        numquam excepturi. Provident consectetur asperiores odio itaque quas laboriosam eaque atque vitae
+                        nulla sunt architecto quidem tempora eius nihil, officia quae velit numquam labore. Officiis rerum
+                        quia illo!</p>
+                </div>
+
+                <div class="box">
+                    <img src="./Pragati&#39;s Portfolio_files/827f8c8170a5842d2560da75249117af.jpg" alt="">
+                    <h1 class="headings">UX/UI <br>Design</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ea magni hic fugiat debitis placeat
+                        numquam excepturi. Provident consectetur asperiores odio itaque quas laboriosam eaque atque vitae
+                        nulla sunt architecto quidem tempora eius nihil, officia quae velit numquam labore. Officiis rerum
+                        quia illo!</p>
+                </div>
+
+                <div class="box">
+                    <img src="./Pragati&#39;s Portfolio_files/b6c16bd46c66e53f3e0e8696e763e922.jpg" alt="">
+                    <h1 class="headings">Digital Marketing</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ea magni hic fugiat debitis placeat
+                        numquam excepturi. Provident consectetur asperiores odio itaque quas laboriosam eaque atque vitae
+                        nulla sunt architecto quidem tempora eius nihil, officia quae velit numquam labore. Officiis rerum
+                        quia illo!</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact">
+            <h1 class="headings">CONTACT</h1>
+            <form action="http://127.0.0.1:5500/index1.html" class="form">
+                <input type="text" name="name" class="input" placeholder="Enter Your Name">
+                <input type="email" name="email" class="input" placeholder="Enter your Email">
+                <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Enter Your Message"></textarea>
+                <input type="submit" value="SEND" id="send">
+            </form>
+        </section>
+    <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
